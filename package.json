@@ -1,0 +1,11 @@
+{
+  "name": "nuxt-apollo-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Terry Tilley <terry@terrytilley.com>",
+  "license": "ISC"
+}
