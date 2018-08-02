@@ -3,9 +3,6 @@ const path = require('path')
 
 module.exports = {
   mode: 'universal',
-  env: {
-    API_URL: process.env.API_URL,
-  },
   loading: {
     color: '#2b90d9',
     failedColor: '#bf5050',
@@ -26,6 +23,7 @@ module.exports = {
   ],
   modules: [
     '@nuxtjs/dotenv',
+    '@nuxtjs/apollo',
     [
       'nuxt-sass-resources-loader',
       [
@@ -34,4 +32,10 @@ module.exports = {
       ],
     ],
   ],
+  apollo: {
+    clientConfigs: {
+      default: '@/plugins/apollo.js',
+    },
+    includeNodeModules: true,
+  },
 }
