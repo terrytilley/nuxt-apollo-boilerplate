@@ -45,6 +45,8 @@ export default {
           .then(({ data }) => data && data.login)
 
         await this.$apolloHelpers.onLogin(token)
+
+        this.$store.commit('auth/isAuthUpdate', true)
         this.$router.push('/')
       } catch (e) {
         console.error(e)
