@@ -16,7 +16,10 @@
     <el-menu-item v-if="!isAuth" :route="{ name: 'login' }" index="3">
       <span>Login</span>
     </el-menu-item>
-    <el-menu-item v-if="isAuth" :route="{ name: 'index' }" index="4">
+    <el-menu-item v-if="!isAuth" :route="{ name: 'signup' }" index="4">
+      <span>Sign Up</span>
+    </el-menu-item>
+    <el-menu-item v-if="isAuth" :route="{ name: 'index' }" index="5">
       <el-button type="primary" round @click.native="onLogout">Logout</el-button>
     </el-menu-item>
   </el-menu>
